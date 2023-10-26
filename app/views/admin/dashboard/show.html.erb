@@ -1,2 +1,12 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<div class = "card w-75 mt-5">
+<h3 class="card-header"> Inventory Details</h3>
+	<div class = "card-body bg-success text-white">
+	<p>Product Categories : <%= @total_categories %></p>
+	<p>Total Number of Products : <%= @total_products %></p>
+	
+	</div>
+	</div>
+	<p><span class ="nav-item"> <%= link_to 'Products', [:admin, :products], class: "nav-link" %></span></p>
+	
+
