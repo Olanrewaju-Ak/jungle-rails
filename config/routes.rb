@@ -23,8 +23,19 @@ Rails.application.routes.draw do
 
 	resources :about, only: [:index]
 
+	#Adding sessions routes
+	#resources :sessions, only: [:new, :create, :destroy]
+	get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+	
+	# Adding the user routes
+	#resources :users, only: [:new, :create]
+	get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # See how all your routes lay out with "rails routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
